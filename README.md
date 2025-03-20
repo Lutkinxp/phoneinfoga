@@ -105,9 +105,8 @@ Step 2: Clone the Repository
   
       cd path/to/directory
 
-Clone the repository containing the phoneinfogath.py script. Replace https://github.com/username/repository.git with the actual URL of the GitHub repository:
+Clone the repository containing the phoneinfogath.py script. 
 
-bash
 
       git clone https://github.com/Lutkinxp/phoneinfogath.git
 
