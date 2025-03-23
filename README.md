@@ -1,7 +1,7 @@
-# Phoneinfoga
+# phoneinfoga
 
 # Overview
-The "phoneinfogath.py" script is designed to gather and display information about a phone number, including its validity, geographical location, and carrier details. It utilizes two external APIs: NumVerify for phone number validation and OpenCage for geolocation based on the location name. Additionally, it retrieves the user's current IP-based geolocation.
+The phoneinfoga.py script is designed to gather and display information about a phone number, including its validity, geographical location, and carrier details. It utilizes two external APIs: NumVerify for phone number validation and OpenCage for geolocation based on the location name. Additionally, it retrieves the user's current IP-based geolocation.
 
 # Key Features:
 
@@ -67,7 +67,7 @@ The "phoneinfogath.py" script is designed to gather and display information abou
   The script may fail if the API keys are invalid or if there are issues with the API services, as indicated by the error message received during execution. For example, an error response might look like this:
   
 
-# Step-by-Step Guide to Download and Run phoneinfogath.py:
+# Step-by-Step Guide to Download and Run phoneinfoga.py:
 Step 1: Install Git
 
 Windows:
@@ -106,16 +106,16 @@ Step 2: Clone the Repository
   
       cd path/to/directory
 
-Clone the repository containing the phoneinfogath.py script. 
+Clone the repository containing the phoneinfoga.py script. 
 
 
-      git clone https://github.com/Lutkinxp/phoneinfogath.git
+      git clone https://github.com/Lutkinxp/phoneinfoga.git
 
 Navigate into the cloned repository:
 
 
 
-      cd repository
+      cd phoneinfoga
 
 Step 3: Install Required Libraries
 
@@ -134,13 +134,13 @@ Step 4: Run the Script
 
    
 
-    python phoneinfogath.py
+    python phoneinfoga.py
 
 or, if you are using Python 3:
 
 bash
 
-    python3 phoneinfogath.py
+    python3 phoneinfoga.py
 
 Step 5: Input API Keys and Phone Number
 
