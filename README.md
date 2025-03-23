@@ -1,4 +1,5 @@
-# Phoneinfogath
+# Phoneinfoga
+
 # Overview
 The "phoneinfogath.py" script is designed to gather and display information about a phone number, including its validity, geographical location, and carrier details. It utilizes two external APIs: NumVerify for phone number validation and OpenCage for geolocation based on the location name. Additionally, it retrieves the user's current IP-based geolocation.
 
