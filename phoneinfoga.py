@@ -51,26 +51,41 @@ def get_ip_geolocation():
     except Exception as e:
         return {"Error": f"IP Geolocation API failed: {e}"}
 
+def save_search_history(data):
+    """Saves search history to a file"""
+    try:
+        with open("search_history.txt", "a") as file:
+            file.write(f"{data}\n")
+    except Exception as e:
+        print(f"Error saving search history: {e}")
+
 def scan_phone_number(phone_number):
     """Runs a full scan for the given phone number"""
     print(f"\n[+] Scanning phone number: {phone_number}")
     
     # Get number details
     number_info = get_number_info(phone_number)
+    history_entry = {"Phone Number": phone_number}
+
     if "Error" not in number_info:
         print(f"Country: {number_info['Country']}")
         print(f"Location: {number_info['Location']}")
         print(f"Carrier: {number_info['Carrier']}")
         print(f"Line Type: {number_info['Line Type']}")
 
+        history_entry.update(number_info)
+
         # Get real-time location coordinates
         location_data = get_location_coordinates(number_info["Location"])
         if "Error" not in location_data:
             print(f"Coordinates: {location_data['Latitude']}, {location_data['Longitude']}")
+            history_entry.update(location_data)
         else:
             print(location_data["Error"])
+            history_entry["Coordinates"] = "Not found"
     else:
         print(number_info["Error"])
+        history_entry["Error"] = number_info["Error"]
 
     # Get real-time IP-based geolocation
     print("\n[+] Checking IP-based Geolocation...")
@@ -79,8 +94,13 @@ def scan_phone_number(phone_number):
         print(f"IP: {ip_location['IP']}")
         print(f"Location: {ip_location['City']}, {ip_location['Region']}, {ip_location['Country']}")
         print(f"Coordinates: {ip_location['Coordinates']}")
+        history_entry.update(ip_location)
     else:
         print(ip_location["Error"])
+        history_entry["IP Geolocation Error"] = ip_location["Error"]
+
+    # Save search history
+    save_search_history(history_entry)
 
 # User input
 phone_number = input("\nEnter the phone number (with country code): ")
