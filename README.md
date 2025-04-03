@@ -64,7 +64,7 @@ The phoneinfoga.py script is designed to gather and display information about a 
           
 # Note:
 
-  The script may fail if the API keys are invalid or if there are issues with the API services, as indicated by the error message received during execution. For example, an error response might look like this:
+  The script may fail if the API keys are invalid or if there are issues with the API services, as indicated by the error message received during execution.
   
 
 # Step-by-Step Guide to Download and Run phoneinfoga.py:
