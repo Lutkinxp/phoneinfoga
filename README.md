@@ -138,7 +138,7 @@ Step 4: Run the Script
 
 or, if you are using Python 3:
 
-bash
+
 
     python3 phoneinfoga.py
 
